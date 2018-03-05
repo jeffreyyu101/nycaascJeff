@@ -8,14 +8,35 @@
 .about-nycaasc {
   background-image: url('../img/2017-cohort-web.jpg');
   background-size: cover;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   min-height: 540px;
 }
 
-.preview-2018 {
-  background-color: rgba(245,245,245,0.85);
-  margin-top: 20px;
-  margin-bottom: 20px;
+.transluscent-bg {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.section-image {
+  max-width: 480px;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-md {
+  font-size: 16px;
+}
+
+#intro-header-image {
+  background-image: url('../img/home_cover_edited.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#suggestions-header-image {
+  background-image: url('../img/workshop_img_1_edited.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.min-height-400 {
+  min-height: 400px;
 }
