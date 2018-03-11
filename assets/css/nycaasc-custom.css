@@ -89,6 +89,7 @@ h3 {
 
 /* CURRENTBOARD
 ------------------------- */
-.img-md-size {
-  /* max-width: 350px; */
+.img-fluid-md {
+  max-width: 400px;
+  height: auto;
 }
