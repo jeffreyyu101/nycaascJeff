@@ -1,16 +1,21 @@
 /* About
 --------- */
-/* #nycaasc-header-image {
-  width: 100%;
-  max-width: 920px;
-}
-#about-page-copy {
-  padding: 15px 10px;
+/* CURRENTBOARD
+------------------------- */
+.img-fluid-md {
+  max-width: 400px;
+  height: auto;
 }
 
-.conf-slide {
-  max-width: 920px;
+.headshot {
+  /* max-width: 300px; */
+  display: block;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-} */
+}
+
+.eboard {
+  /* font-size: 13px; */
+}
+.text-small {
+  font-size: 14px;
+}
