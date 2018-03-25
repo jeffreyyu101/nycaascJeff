@@ -5,10 +5,11 @@
   max-width: 720px;
 }
 
-.about-nycaasc {
+#about-nycaasc-link {
   background-image: url('../img/2017-cohort-web.jpg');
   background-size: cover;
   min-height: 540px;
+  background-attachment: fixed;
 }
 
 .transluscent-bg {
@@ -26,9 +27,10 @@
 }
 
 #intro-header-image {
-  background-image: url('../img/home_cover_edited.jpg');
+  background: url('../img/home_cover_edited.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 #suggestions-header-image {
