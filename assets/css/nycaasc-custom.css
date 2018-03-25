@@ -30,7 +30,7 @@
 
 blockquote {
   opacity: 0.7;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-style: italic;
 }
 
@@ -40,6 +40,10 @@ blockquote {
 
 .grow:hover {
   font-size: larger;
+}
+
+.text-small {
+  font-size: 14px;
 }
 
 /* SITE FOOTER
@@ -87,8 +91,3 @@ h3 {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-/* CURRENTBOARD
-------------------------- */
-.img-md-size {
-  /* max-width: 350px; */
-}
