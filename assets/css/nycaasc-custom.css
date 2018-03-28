@@ -21,14 +21,7 @@
   margin-top: 1em;
 }
 
-.text-jumbo {
-  font-size: 20px;
-}
 
-.centered-image {
-  display: block;
-  margin: 0 auto;
-}
 
 blockquote {
   opacity: 0.7;
@@ -44,8 +37,15 @@ blockquote {
   font-size: larger;
 }
 
+/** text variations **/
 .text-small {
   font-size: 14px;
+}
+.text-md {
+  font-size: 16px;
+}
+.text-jumbo {
+  font-size: 20px;
 }
 
 .card-shadow {

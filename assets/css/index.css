@@ -1,44 +1,35 @@
-#cohort-2017-img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 720px;
-}
-
-#about-nycaasc-link {
-  background-image: url('../img/2017-cohort-web.jpg');
-  background-size: cover;
-  min-height: 540px;
-  background-attachment: fixed;
-}
-
 .transluscent-bg {
   background-color: rgba(0,0,0,0.6);
 }
 
 .section-image {
   max-width: 480px;
-  display: block;
-  margin: 0 auto;
 }
 
-.text-md {
-  font-size: 16px;
-}
 
-#intro-header-image {
-  background: url('../img/home_cover_edited.jpg');
+
+/* header images */
+
+.fixed-bg {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-#suggestions-header-image {
-  background-image: url('../img/workshop_img_1_edited.jpg');
-  background-size: cover;
-  background-position: center;
+#intro-header-image {
+  background-image: url('../img/home_cover_edited.jpg');
 }
 
-.min-height-400 {
-  min-height: 400px;
+#suggestions-header-image {
+  background-image: url('../img/workshop_img_1_edited.jpg');
+  background-attachment: initial;
+  min-height: 300px;
+}
+
+#about-header-image {
+  background-image: url('../img/2017-cohort-web.jpg');
+  min-height: 540px;
+}
+#about-header-image .jumbotron {
+  max-width: 720px;
 }
