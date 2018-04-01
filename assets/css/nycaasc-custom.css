@@ -21,20 +21,28 @@
   margin-top: 1em;
 }
 
-
-
-blockquote {
-  opacity: 0.7;
-  font-size: 1.2em;
-  font-style: italic;
-}
-
 .grow {
   transition: .2s ease;
 }
 
 .grow:hover {
   font-size: larger;
+}
+
+/** content **/
+h1 {
+  font-family: Futura, Helvetica, sans-serif;
+  color: #d13238;
+  margin-top: 0.75em;
+}
+h2 {
+
+}
+
+blockquote {
+  opacity: 0.7;
+  font-size: 1.2em;
+  font-style: italic;
 }
 
 /** text variations **/
@@ -85,21 +93,3 @@ blockquote {
 .socialmedia:hover {
   opacity: 1;
 }
-
-
-/* SITE PAGE CONTENT
--------------------- */
-
-h1 {
-  font-family: Futura, Helvetica, sans-serif;
-  color: #d13238;
-  margin-top: 0.75em;
-}
-h2 {
-  font-family: "Helvetica Neue", sans-serif;
-  color: #4F646F;
-}
-h3 {
-  font-family: "Helvetica Neue", sans-serif;
-}
-
