@@ -31,7 +31,7 @@
 
 /** content **/
 h1 {
-  font-family: Futura, Helvetica, sans-serif;
+  /* font-family: Futura, Helvetica, sans-serif; */
   color: #d13238;
   margin-top: 0.75em;
 }
