@@ -1,0 +1,11 @@
+#conference-header {
+  background-image: url('../img/placeholder-bg.jpg');
+  background-size: cover;
+  min-height: 540px;
+  background-attachment: fixed;
+}
+
+.time {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
