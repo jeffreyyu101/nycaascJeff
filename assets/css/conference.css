@@ -5,6 +5,17 @@
   background-attachment: fixed;
 }
 
+#general-btn {
+  background-color: rgba(209,50,56,1);
+  border: none;
+}
+
+#event-info {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .time {
   font-size: 1.5rem;
   font-weight: 400;
