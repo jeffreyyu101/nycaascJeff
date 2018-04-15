@@ -20,3 +20,9 @@
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+.small-grid {
+  max-width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
