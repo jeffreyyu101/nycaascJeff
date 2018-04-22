@@ -5,6 +5,7 @@
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 
 # In[1]:
 
@@ -40,42 +41,45 @@ def write_wks_page(list_of_workshops, year):
     f.write(wks_page)
     f.close()
 
-# In[2]:
-
-#Creates individual section for workshop speaker
-def speaker_block(speaker_name, speaker_bio, bio_id):
-    return """
-          <div class="row">
-          
-              <div class="col-md-4>
-                <img class="img-responsive" src="assets/img/wks/{bio_id}.jpg" >
-                  
-              </div>
-              
-              <div class="col-md-8">
-                <h3>{speaker_name}</h3>
-                <p>{speaker_bio}</p>
-                <p></p><!--Social media/website links-->
-                <p>Other workshops: <a href="">Workshop 1</a>, <a href="">Workshop 2</a></p><!--If applicable-->
-              </div>
-              
-          </div>
-          
-""".format(speaker_name=speaker_name, speaker_bio=speaker_bio, bio_id = bio_id)
-
 # In[1]:
     
 def write_page(wks_list):
     
     # insert data into variables
-    track = wks_list['track']
+    for index, row in wks_list.iterrows(): # x = row number
+        print(index, row)
+        track = row['track']
+        time = row['time']
+        location = row['location']
+        title = row['title']
+        description = row['description']
+        speakers = row['speakers']
     
+        innerHTML = ""
     
+        # assemble HTML string
+        if not title == 'nan':
+            # insert data from csv into HTML string templates
+            innerHTML = head(title) + BODY_OPENING + workshopIntro(track,title,location,description)
+        # HTML within #workshop-speakers. Multiple speakers occupy separate rows
+        innerHTML += """
+            <section id="workshop-speakers">
+              <div class="row">
+              """ + workshopSpeakerSection(speakers) + """
+              </div>
+            </section><!--workshop-speakers-->
+        """
+        if not title == 'nan':
+            innerHTML += BODY_CLOSING
     
-    #assemble HTML string
-        #insert data from csv into HTML string templates
-    innerHTML = head() + body()
-    #write file
+        if not title == 'nan':
+            # write file
+            wksNum = title[0] #temp
+            directory = "{track}{wksNum}.html".format(track=track, wksNum=wksNum)
+            # directory = "demo.html".format(track=track, wksNum=wksNum)
+            f = open(directory, 'w')
+            f.write(innerHTML)
+            f.close()
     
 
 
@@ -126,6 +130,64 @@ def head(title):
 
 # In[3]:
 
+# Opening of body
+    # opening body tags
+    # header
+    # div.container opening tag
+BODY_OPENING = """
+<body>
+    <header id="header"></header>
+    <main>
+      <div class="container">    
+    """    
+
+# Closing of body
+        # div.container closing tag
+        # footer
+        # google analytics and javascript
+        # closing body tags
+BODY_CLOSING = """
+            <p class="pt-5"><a href="../../conference.html" title="NYCAASC 2018">&larr; Back to NYCAASC 2018 conference page</a></p>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    
+            ga('create', 'UA-68409586-1', 'auto');
+            ga('send', 'pageview');
+    </script>
+    <!--Required Popper.js and jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!--Bootstrap 4-->
+    <script src="../../assets/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!--Import site header-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("../../header.html");
+            $("#footer").load("../../footer.html");
+        });
+    </script>
+</body>
+</html>
+    """    
+
+# In[4]:    
 def body():
     # Opening of body
         # opening body tags
@@ -213,125 +275,15 @@ def workshopIntro(track, title, location, desc, triggers="None"):
 
 # In[5]:
     
-def workshopSpeakerSection(speaker, bio):
+def workshopSpeakerSection(speaker, bio=""):
     innerHTML = """
-        <div class="col-xs-12 col-md-4">
-          <div class="bio-circle d-flex justify-content-center align-items-center mb-3">
-            <span>200x200</span>
-            <img src="" alt="" class="img-fluid">
-          </div>
-          <h3>{speakerName}</h3>
-          <p>{speakerBio}</p>
-        </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="bio-circle d-flex justify-content-center align-items-center mb-3">
+                <span>200x200</span>
+                <img src="" alt="" class="img-fluid">
+              </div>
+              <h3>{speakerName}</h3>
+              <p>{speakerBio}</p>
+            </div>
     """.format(speakerName = speaker, speakerBio = bio)
     return innerHTML
-
-
-# In[ ]:
-
-#Compile all of the speakers of one workshop
-def get_all_speakers(list_of_workshops, num_speakers):
-    #Create a list of all of the speaker names
-    list_of_names = list_of_workshops.iloc[3,5,7]
-    #Create a list of all of the speaker bios
-    list_of_bios = list_of_workshops.iloc[4,6,8]
-    list_of_ids = list_of_workshops #create id creator function to add to dataframe
-    total_speaker_blocks = """"""
-    #Create a speaker block string for each speaker
-    for x in range(num_speakers):
-        total_speaker_blocks += speaker_block(list_of_names[x], list_of_bios[x], list_of_ids[x])
-    return total_speaker_blocks
-
-
-# In[8]:
-
-def speaker_section(num_speaker, speaker_block):
-    speaker_chunk = """<div class="row">"""
-    for speaker in range(num_speaker):
-        if ((speaker % 3) == 0) & speaker !=0:
-            speaker_chunk += """</div> \n <div class="row">"""
-          
-            speaker_chunk += str(speaker_block[speaker]) #future present_block(function)
-          
-        else: 
-            speaker_chunk += speaker_block[speaker]
-            speaker_chunk += """</div>"""
-    return speaker_chunk
-#add end div
-#def for taking first lower(initial), and lower(lastname) to construct different directores
-#def for creating short bio
-
-
-# In[9]:
-
-#speaker_block = ['A', 'B', 'C', 'D', 'E']
-#speaker_block = ['A', 'B', 'C', 'D', 'E', 'F']
-#speaker_block = ['A', 'B']
-#num_speaker = len(speaker_block)
-#print speaker_section(num_speaker, speaker_block)
-
-
-# In[2]:
-
-#Creates speaker directory ID from track id and speaker name (probably not necessary)
-def speaker_directory (track_id, speaker_first, speaker_last):
-    first_names = speaker_first.split(' ')
-    first_initials = ""
-    for name in first_names:
-        first_initials += name[0]
-  
-    return track_id + first_initials + speaker_last
-
-
-# In[11]:
-
-#Creates shortened bio (probably not necessary)
-def short_bio(bio):
-    charcount = 0
-    wordcount = 0
-    for char in bio:
-        charcount += 1
-        if wordcount < 20:
-            if char == ' ':
-                wordcount += 1 
-        else:
-              return bio[:charcount-2] + "..." #return first 20 words of bio
-      
-        return bio[:50] + "..." #return first 50 chars by default
-
-
-# In[12]:
-
-def speaker_chunk(speaker_img_url, speaker_img_alt_txt, speaker_bio_prev):
-    return """
-  <div class="col-sm-6 col-md-4">
-     <div class="thumbnail">
-         <img src="{speaker_img_url}" alt="{speaker_img_alt_txt}">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>{speaker_bio_prev}</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Read Full Bio</a></p>
-                  </div>
-      </div>
-   </div>""".format(speaker_img_url=speaker_img_url, speaker_img_alt_txt=speaker_img_alt_txt, speaker_bio_prev=speaker_bio_prev)
-
-
-# In[13]:
-
-#Creates formatted opening section with workshop track, title, description
-def wks_info (track, wks_title, wks_descr):
-    trackString = ""
-    if track == 1:
-        trackString = "Track 1"
-    elif track == 2:
-        trackString = "Track 2"
-    elif track == 3:
-        trackString = "Track 3"
-    
-    return """
-    <h2>""" + trackString + """Track 1: Community</h2>
-
-    <h2>{wks_title}</h2>
-
-    <p>{wks_descr}</p>
-      """.format(track=track, wks_title=wks_title, wks_descr=wks_descr)
