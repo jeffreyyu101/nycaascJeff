@@ -7,7 +7,7 @@ import re
 
 # In[1]:
 
-wks_list = pd.read_csv("wks_2018_list_clean.csv", encoding='latin-1')
+wks_list = pd.read_csv("wks_2018_list_clean.csv", encoding='windows-1252')
 print ("Type write_page(wks_list) to start.")
 
 # In[1]:
@@ -64,8 +64,9 @@ def write_page(wks_list):
             innerHTML += BODY_CLOSING
     
             # write file
-            directory = "{track}{num}.html".format(track=int(track), num="0" + str(wksNum))
-            f = open(directory, 'w')
+            wksNumStr = "0" + str(wksNum)
+            directory = "{track}{num}.html".format(track=int(track), num=wksNumStr)
+            f = open(directory, 'w', encoding='utf-8')
             f.write(innerHTML)
             f.close()
 
