@@ -36,3 +36,13 @@
   color: whitesmoke;
   text-align: right;
 }
+
+#workshops a {
+  color: initial;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#workshops a:hover {
+  color: rgb(0,123,255);
+}

@@ -3,7 +3,6 @@
 
 # import necessary packages
 import pandas as pd
-import re
 
 # In[1]:
 
@@ -30,6 +29,10 @@ def write_page(wks_list):
         description = row['description']
         speaker = row['speaker']
         bio = row['bio']
+        if pd.notna(row['img_code']):
+            img_code = row['img_code']
+        else:
+            img_code = ""
         
         if currTrack != track:
             currTrack = track
@@ -42,16 +45,16 @@ def write_page(wks_list):
             innerHTML = head(title) + BODY_OPENING + workshopIntro(track,title,location,description,time)
             # add speaker in same row
             innerHTML += """
-                <section id="workshop-speakers">
+                <section id="workshop-speakers" class="pt-3">
                   <div class="row">
-                  """ + workshopSpeakerSection(speaker, bio) + """
+                  """ + workshopSpeakerSection(speaker, img_code, bio) + """
                   """
             
             speakerCount -= 1
         # add extra speakers if occupying below rows
         else:
             innerHTML += """
-                  """ + workshopSpeakerSection(speaker, bio) + """
+                  """ + workshopSpeakerSection(speaker, img_code, bio) + """
                   """
             speakerCount -= 1
            
@@ -166,8 +169,8 @@ BODY_CLOSING = """
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         $(function() {
-            $("#header").load("../../header.html");
-            $("#footer").load("../../footer.html");
+            $("#header").load("../../wks-header.html");
+            $("#footer").load("../../wks-footer.html");
         });
     </script>
 </body>
@@ -183,22 +186,29 @@ def workshopIntro(track, title, location, desc, time, triggers="None"):
           <p><a href="../../conference.html" title="NYCAASC 2018">NYCAASC 2018</a> > Workshops: Track {trackNum}</p>
           <h2>{wksTitle}</h2>
           <p class="lead">{roomNum}, {time}</p>
-          <p><strong>Workshop description</strong>: {wksDesc}</p>
+          <p>{wksDesc}</p>
         </section><!--#workshop-intro-->    
     """.format(trackNum=int(track), wksTitle=title, roomNum = location, wksDesc = desc, time = time)
     return innerHTML
 
 # In[5]:
     
-def workshopSpeakerSection(speaker, bio=""):
+def workshopSpeakerSection(speaker, img_code, bio=""):
+    if img_code == "":
+        img_code = "profile-icon"
     innerHTML = """
                 <div class="col-xs-12 col-md-4">
-                  <div class="bio-circle d-flex justify-content-center align-items-center mb-3">
-                    <span>200x200</span>
-                    <img src="" alt="" class="img-fluid">
+                  <div class="bio-circle mb-3">
+                    <img src="../../assets/img/wks/2018/{speakerImg}.jpg" alt="{speakerName}" class="img-fluid rounded">
                   </div>
                   <h3>{speakerName}</h3>
                   <p>{speakerBio}</p>
                 </div>
-    """.format(speakerName = speaker, speakerBio = bio)
+    """.format(speakerImg = img_code, speakerName = speaker, speakerBio = bio)
     return innerHTML
+
+# In[6]:
+def generateImgCode(img_code):
+    code = img_code.lower()
+    code = code.replace(' ','-')
+    return code
