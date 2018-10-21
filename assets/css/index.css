@@ -9,9 +9,14 @@
 /* header images */
 
 .fixed-bg {
+  min-width: 100%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+}
+@media only screen and (min-width: 577px ) {
+  .fixed-bg {
+    background-attachment: fixed;
+  }
 }
 
 #intro-header-image {
