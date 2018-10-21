@@ -31,3 +31,8 @@
 #about-header-image .jumbotron {
   max-width: 720px;
 }
+
+#application-2019 {
+  background-image: url('../img/2018-cohort-lg.jpg');
+  min-height: 20rem;
+}

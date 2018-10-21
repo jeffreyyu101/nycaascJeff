@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="Amelia Chu">
@@ -15,7 +15,10 @@
      <!-- Bootstrap core CSS -->
      <link href="assets/bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css" rel="stylesheet">
      <link href="assets/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css" rel="stylesheet">
-     <link href="assets/bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+     <!-- Font Awesome icons -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -48,69 +51,99 @@
 </head>
 
 <body>
-
     <header id="header"></header>
     <main>
-        <div id="intro-header-image" class="fixed-bg">
-            <div class="transluscent-bg pt-5">
-                <img class="section-image d-block mx-auto" src="assets/img/logo/emergence-logo.svg" alt="Emergence logo">
-                <h1 class="transluscent-bg p-3 mb-0 display-4 text-light">The 12th Annual NYCAASC: <em>Emergence</em></h1>
+        <div class="jumbotron pt-3 pb-5 mb-0">
+            <!-- <img class="img-fluid" src="assets/img/logo/nycaasc-logo-full-md.png" alt="NYCAASC"> -->
+            <h1 class="text-center">NYCAASC: The New York City Asian American Student Conference</h1>   
+            <p class="lead text-center">The New York City Asian American Student Conference (NYCAASC) is a student run intercollegiate organization dedicated to addressing issues pertinent to Asian/Pacific Islander Americans on local, national, and global scales.</p> 
+        </div>
+        <div id="application-2019" class="container-fluid fixed-bg px-0">
+            <div class="transluscent-bg d-flex flex-column justify-content-center align-items-center" style="min-height: inherit">
+                <h2 class="text-center text-light">Applications are currently being accepted for NYCAASC 2019!</h2>
+                <p class="text-center lead text-light">Applications for both the e-board and general membership are open!</p>
             </div>
         </div>
-        <div class="jumbotron m-0 py-5">
-            <div class="row py-5">
-                <div class="col-md-8 px-md-5">
-                    <blockquote>“In this country, ‘American’ means white. Everybody else has to hyphenate.” - Toni Morrison</blockquote>
-                    <p class="lead">We are uniquely <strong>Asian - American</strong>. Like a strand of thread connecting two worlds, the hyphen often reminds us of how we are seen as neither fully Asian nor fully American. The Asian-American narrative emerges not from our own experiences, but from the stories that others have constructed about us, and our otherness comes from our existence between multiple worlds. This year’s conference will explore the theme of “Emergence.” - How have people emerged with an Asian-American identity because of, or in spite of, their lived experiences? How have Asian-Americans been rewriting history with their perspectives? Most importantly, how does one embrace the hyphen as a home? NYCAASC 2018 invites attendees to explore the social, cultural, and political conditions under which the different aspects of their Asian-American identities emerge. Together, we seek to build a future where everyone is able to proudly embrace their identities.</p>
-                </div>
-                <div class="col-md-4 d-flex">
-                    <div class="card card-shadow">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li class="list-item"><strong>Date</strong><br>April 28, 2018</li>
-                                <li class="list-item"><strong>Location</strong><br>NYU Kimmel Center for University Life</li>
-                            </ul>
-                            <a href="https://bit.ly/nycaasc2018" class="btn btn-lg btn-block btn-primary mt-3" alt="Register">Register</a>
-                            <a href="conference.html" class="btn btn-lg btn-block btn-outline-secondary mt-3">More info</a>
+        <div class="container pt-3 pb-5">
+            <div class="col-12">
+                <h3>Join the NYCAASC 2019 team!</h3>
+                <p>The <strong>New York City Asian American Student Conference (NYCAASC)</strong> is is a day-long conference for students who are passionate about issues around Asian Americans. Since our inception in 2006, we've wanted to create a safe space to talk about how to challenge oppression and injustice.</p>
+                <p>As a member of the organizing team, you’ll get to educate and empower fellow students around topics concerning Asian Americans & social justice, activism, identity, diaspora, art, and more. In the process of developing this valuable community space, we work together to help each other grow as organizers, activists, allies, human beings, and friends.</p>
+                <p><strong>Applicants who have been selected will be contacted for a follow-up interview at a later date.</strong></p>
+                <p>Please contact Richard (<a href="mailto:richard@nycaasc.com">richard@nycaasc.com</a>) and/or Julia (<a href="mailto:julia@nycaasc.com">julia@nycaasc.com</a> if you have any questions or concerns about applying!</p>
+            </div>
+            <div class="row text-center text-light">
+                <div class="col-12 p-1">
+                    <div class="bg-info rounded p-3 h-100">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-info-circle fa-2x"></i></li>
+                            <li><p class="lead">NYCAASC eligibility and preferred qualifications</p></li>
+                            <li><p>What are we looking for in a member of the team?</p></li>
+                            <li><a class="btn btn-outline-light" data-toggle="collapse" href="#eligibility" role="button" aria-expanded="false" aria-controls="eligibility">
+                                Eligibility and preferred qualifications
+                            </a></li>
+                        </ul>
+                        <div class="collapse" id="eligibility">
+                            <div class="card card-body border-0 bg-transparent text-left">
+                                <h5>We're looking for:</h5>
+                                <ul>
+                                    <li>Young adults who are seeking an opportunity to grow, learn, and create community!</li>
+                                    <li>Passion for Asian American issues, activism, identity, history, etc.</li>
+                                    <li>Diligent, motivated go-getters who can work in a fast-paced environment</li>
+                                    <li>Leaders with a vision for the Asian American community</li>
+                                </ul>
+                                <p>We welcome applicants of any background--not just Asian American-identifying folks--including race, gender, class, ability, immigration status, etc!</p>
+                                <h5>Who is eligible to apply for the NYCAASC team?</h5>
+                                <ul>
+                                    <li>Must be: Current undergraduate, graduate, or high school student</li>
+                                    <li>Preferred: Currently living in the NYC metropolitan area</li>
+                                    <li>Preferred: Prior experience in Asian American activism/clubs</li>
+                                </ul>
+                                <h5>Who is eligible to apply for the e-board?</h5>
+                                <ul>
+                                    <li>Must be: Current undergraduate, graduate, or high school student</li>
+                                    <li>Preferred: Currently living in the NYC metropolitan area</li>
+                                    <li>Preferred: Prior experience in a leadership position in a club or other organization</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="fire-noodle-video" class="container-fluid py-5 px-sm-5">
-            <div class="row mb-5">
-                <div class="col-xs-12 col-md-8">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ay_WoJFcWT4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="col-md-4 p-1">
+                    <div class="bg-dark rounded p-3 h-100">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-chair fa-2x"></i></li>
+                            <li><p class="lead"><strong>Apply to the NYCAASC 2019 e-board!</strong></p></li>
+                            <li>Use your skills and experience to guide a NYCAASC committee toward success. Deadline: Saturday, November 3rd, 11:59pm</li>
+                        </ul>
+                        <a class="btn btn-outline-light" href="https://bit.ly/nycaasc2019eboardapp">Apply</a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-4">
-                    <h2>NYCAASC does the Fire Noodle Challenge</h2>
-                    <p class="lead">The team behind NYCAASC 2018: Emergence is hard at work behind the scenes!...or so we think. Get to know some of our members as they enjoy a delicious bowl of hellfire noodles.</p>
+                <div class="col-md-4 p-1">
+                    <div class="bg-dark rounded p-3 h-100">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-file-alt fa-2x"></i></li>
+                            <li><p class="lead"><strong>Apply to the NYCAASC 2019 general team!</strong></p></li>
+                            <li>Build a valuable space for Asian American students. Deadline: Saturday, November 10, 11:59pm</li>
+                        </ul>
+                        <a class="btn btn-outline-light" href="https://bit.ly/nycaasc2019generalapp">Apply</a>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <img class="img-fluid pt-1" src="assets/img/firenoodle.gif" alt="members doing the fire noodle challenge">
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <img class="img-fluid pt-1" src="assets/img/firenoodle-2.gif" alt="members doing the fire noodle challenge 2">
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid m-0 bg-dark text-light">
-            <div class="row">
-                <div class="col-md-6 fixed-bg" id="suggestions-header-image">
-                </div>
-                <div class="col-md-6 p-5">
-                    <h2 class="text-light">Volunteer for NYCAASC 2018!</h2>
-                    <p>Calling all cool humans! We're looking for volunteers to help us run the conference on the day of. You can pick the timeslot(s) that work best for you! <a href="bit.ly/nycaasc2018volunteer"><strong>Sign up to be a volunteer here!</strong></a></p>
+                <div class="col-md-4 p-1">
+                    <div class="bg-dark rounded p-3 h-100">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-question-circle fa-2x"></i></li>
+                            <li><p class="lead"><strong>NYCAASC team committees and responsibilities</strong></p></li>
+                            <li><p>Check this doc to see which committee best fits your interests!</p></li>
+                        </ul>
+                        <a href="https://bit.ly/nycaasc2019committees" class="btn btn-outline-info">List of committees</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="about-header-image" class="container-fluid fixed-bg d-flex align-items-center">
             <div class="jumbotron transluscent-bg mr-auto text-light">
-                <h1>What is NYCAASC?</h1>
+                <h2>What is NYCAASC?</h2>
                 <p class="lead">The <strong>New York City Asian American Student Conference (NYCAASC)</strong> is an annual conference created for and by students who want to think critically about issues facing the Asian/Pacific Islander American community.</p>
                 <a class="btn btn-outline-light" href="about.html" title="About NYCAASC">Learn more</a>
             </div>
