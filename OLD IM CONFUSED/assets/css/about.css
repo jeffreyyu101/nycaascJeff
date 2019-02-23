@@ -1,0 +1,14 @@
+/* About
+--------- */
+/* CURRENTBOARD
+------------------------- */
+.img-fluid-md {
+  max-width: 400px;
+  height: auto;
+}
+
+.headshot {
+  /* max-width: 300px; */
+  display: block;
+  margin: 0 auto;
+}

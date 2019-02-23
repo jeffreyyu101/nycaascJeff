@@ -1,0 +1,48 @@
+#conference-header {
+  background-image: url('../imgs/placeholder-bg.jpg');
+  background-size: cover;
+  min-height: 540px;
+  background-attachment: fixed;
+}
+
+#general-btn {
+  background-color: rgba(209,50,56,1);
+  border: none;
+}
+
+#event-info {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.small-grid {
+  max-width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.featured-content-h {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 32px;
+  color: whitesmoke;
+  text-align: right;
+}
+
+#workshops a {
+  color: initial;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#workshops a:hover {
+  color: rgb(0,123,255);
+}

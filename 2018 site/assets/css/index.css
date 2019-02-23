@@ -1,0 +1,43 @@
+
+
+.section-image {
+  max-width: 480px;
+}
+
+
+
+/* header images */
+
+.fixed-bg {
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (min-width: 577px ) {
+  .fixed-bg {
+    background-attachment: fixed;
+  }
+}
+
+#intro-header-image {
+  background-image: url('..imgs/home_cover_edited.jpg');
+}
+
+#suggestions-header-image {
+  background-image: url('../imgs/workshop_img_1_edited.jpg');
+  background-attachment: initial;
+  min-height: 300px;
+}
+
+#about-header-image {
+  background-image: url('../img/2017-cohort-web.jpg');
+  min-height: 540px;
+}
+#about-header-image .jumbotron {
+  max-width: 720px;
+}
+
+#application-2019 {
+  background-image: url('../img/2018-cohort-lg.jpg');
+  min-height: 20rem;
+}

@@ -1,0 +1,55 @@
+/* HSL page
+--------- */
+
+.hsl-apply {
+  margin-bottom: 0;
+}
+
+#header-background {
+  background-image: linear-gradient(to right, rgba(223, 100, 100, 1) 40%, rgba(255, 255, 255, 0.5)), url("../img/hsl/2017/board-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.hsl-2017-portfolio {
+  padding-bottom: 30px;
+}
+
+#hsl-2017-heading {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#hsl-2017-heading h3 {
+  margin-top: 0;
+}
+
+.hsl-2017-portfolio img {
+  width: 100%;
+}
+
+.hsl-2017-projects {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.img-gall {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.hsl-portfolio-caption {
+  padding: 20px;
+  background-color: rgba(223, 100, 100, 0.1);
+}
+
+.hsl-portfolio-caption p {
+  margin: 0;
+}
+
+.hsl-2017-projects h4{
+  margin-top: 0;
+}
