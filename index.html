@@ -11,14 +11,21 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome Icons and Animation-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/font-awesome-animation.min.css">
     
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+
     <title>NYCAASC</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
       <a class="narbar-brand " href="index.html">
         <img src="assets/img/logos/logoOnly.png" height="50px" class="d-inline-block align-top">
       </a>
@@ -27,25 +34,25 @@
       </button>
     
       <div class="collapse navbar-collapse" id="navbar-nycaasc">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">2019 Conference</a>
+            <a class="nav-link" href="conference.html">2019 Conference</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">High School Liaison</a>
+            <a class="nav-link" href="hsl.html">High School Liaison</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Archive
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">2018</a>
+              <a class="dropdown-item" href="2018 site/index.html">2018</a>
               <a class="dropdown-item" href="#">2017</a>
             </div>
           </li>
@@ -57,18 +64,31 @@
       <div class="container" id="tempHead">
         <div id="tempCOLLISION" class="text-center">
           <h4>NYCAASC 2019:</h4>
-          <h1 class="faa-passing animated-hover">COLL<span>ISION</span></h1>
+          <h1 class="faa-float animated">COLL<span>ISION</span></h1>
         </div>
       </div>
-      <div class="container">
+      <div class="container mb-5">
         <h1>NYCAASC 2019 Presents: COLLISION</h1>
         <p>
           The theme for this year’s conference, Collision, aims to explore how the Asian American experience emerges from our communities’ converging movements. We invite folx to think about collision within and amongst Asian American experiences as an active process of developing identity, expressing oneself, and exchanging narratives.
         </p>
-        <a class="btn btn-danger" href="#" role="button">Visit 2019 Conference page</a>
-        <a class="btn btn-danger" href="#" role="button">Register Now</a>
+        <h4>April 29 <small>9am to 5pm</small></h4>
+        <h4>New York University <small>Kimmel Center for Student Life</small></h4>
+        <a class="btn btn-danger mt-3" href="#" role="button">Visit 2019 Conference page</a>
+        <a class="btn btn-danger mt-3" href="#" role="button">Register Now</a>
       </div>
     </header>
+
+    <div id="emergenceGroup">
+      <div id="about-header-image" class="container fixed-bg d-flex align-items-center">
+        <div class="jumbotron transluscent-bg text-light align-left">
+            <h1>What is NYCAASC?</h1>
+            <p class="lead">The <strong>New York City Asian American Student Conference (NYCAASC)</strong> is an annual conference created for and by students who want to think critically about issues facing the Asian/Pacific Islander American community.</p>
+            <a class="btn btn-outline-light" href="about.html" title="About NYCAASC">Learn more</a>
+        </div>
+      </div>
+    </div>
+        
     
     <section id="abtNYCAASC" class="bg-light">
       <div class="container my-4">
@@ -88,10 +108,77 @@
             <a class="btn btn-danger" href="#" role="button">Learn more about HSL</a>
           </div>
         </div>
-        
       </div>
     </section>
     
+    <section id="theme">
+      <div class="container">
+        <h3 class="text-danger">Collision Theme Statement</h3>
+        <p>
+          While 2018 saw unprecedented representation for certain Asian groups in Hollywood blockbusters, it also saw continued struggles for community members at the margins, from deportation to displacement. This history of underrepresentation and differentiation within the pan-Asian community prompts us to revisit the roots of the term “Asian American.” How can we learn from the student activists in the ‘60s, who coined “Asian American” as a statement of solidarity—a commitment to unite in the name of social justice?
+          <br>
+          <br>
+          The theme for this year’s conference, Collision, aims to explore how the Asian American experience emerges from our communities’ converging movements. Collision—the act of worlds making contact—characterizes the Asian American experience, whether broadly, as with migration, or individually, as with assimilation. When our paths collide, how does that inform, engage, and challenge our own understandings of what it means to be Asian American?
+          <br>
+          <br>
+          We invite attendees to think about collision within and amongst Asian American experiences as an active process of developing identity, expressing oneself, and exchanging narratives. Through this year’s NYCAASC, we seek to create a more nuanced understanding of Asian American identity that is shaped by our stories.
+        </p>
+      </div>
+    </section>
+    
+    <div id="emergenceGroup"></div>
+    
+    
+    <!-- Footer -->
+    <footer class=" pt-4 bg-light">
+        <div class="container text-center text-md-left">
+          <div class="row">
+            <div class="col-md-6 mr-4">
+              <img src="assets/img/logos/logoOnlyCropped.png" style="height:30px;" class=" mt-3 mb-2">
+              <p>
+                The <b>New York Asian American Student Conference</b> (NYCAASC) is a student-run, intercollegiate organization dedicated to bringing together students from all around New York City to learn about social issues regarding the Asian/Pacific Islander American community.
+              </p>
+            </div>
+            <div class="col-md-5 mx-auto">
+              <h5 class="font-weight-bold mt-3 mb-4">Keep in touch!</h5>
+                <a class="" href="https://www.facebook.com/nycaasc" target="_blank">
+                  <i class="fab fa-facebook-f faa-wrench animated-hover"> </i>
+                </a>
+                <a class="" href="https://twitter.com/nycaasc" target="_blank">
+                  <i class="fab fa-twitter faa-wrench animated-hover"> </i>
+                </a>
+                <a class="" href="https://www.instagram.com/nycaasc/" target="_blank">
+                  <i class="fab fa-instagram faa-wrench animated-hover"> </i>
+                </a>
+                <a class="" href="mailto:info@nycaasc.com" target="_blank">
+                  <i class="fas fa-envelope faa-wrench animated-hover"> </i>
+                </a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Links -->
+    
+        <hr>
+    
+        <!-- Call to action -->
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1">Register for free</h5>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+          </li>
+        </ul>
+        <!-- Call to action -->
+    
+        <hr>
+    
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="nycaasc.com">NYCAASC</a>
+        </div>
+    
+    </footer>
+    <!-- Footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
