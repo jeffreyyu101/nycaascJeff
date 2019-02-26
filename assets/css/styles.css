@@ -25,6 +25,14 @@ nav{
     color: #351c75;
 }
 
+#collision{
+    color: #0b5394;
+}
+
+#collision span{
+    color: #351c75;
+}
+
 #emergenceGroup { 
   background-image: url("../img/emergenceGroup.jpg");
   background-attachment: fixed;
