@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 
 nav{
     font-family: 'Allerta Stencil', sans-serif;
@@ -7,30 +10,8 @@ nav{
 
 /*----------HOME PAGE START ----------*/
 
-#tempCOLLISION{
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
-
-#tempCOLLISION h4{
-    font-family: "Times New Roman", Times, serif;
-}
-
-#tempCOLLISION h1{
-    font-size: 100px;
-    color: #0b5394;
-}
-
-#tempCOLLISION span{
-    color: #351c75;
-}
-
-#collision{
-    color: #0b5394;
-}
-
-#collision span{
-    color: #351c75;
+#2019con img{
+    width: 700px;
 }
 
 #emergenceGroup { 
@@ -78,11 +59,37 @@ nav{
 
 /*----------ABOUT PAGE END ----------*/
 
+/*----------HLS PAGE START ----------*/
+
+#header-background {
+  background-image: linear-gradient(to right, rgba(223, 100, 100, 1) 40%, rgba(255, 255, 255, 0.5)), url("../img/hslBoard.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.hsl-portfolio-caption {
+  padding: 20px;
+  background-color: rgba(223, 100, 100, 0.1);
+}
+
+
+
+/*----------HSL PAGE END ----------*/
 
 /*----------RESOURCES PAGE END ----------*/
 
 #resources h3{
     margin-top: 15px;
+}
+
+#resources p{
+    font-size: 1.2em;
+}
+
+#resources .col-12{
+    max-width: 800px;
 }
 
 /*----------RESOURCES PAGE END ----------*/
@@ -99,3 +106,5 @@ footer i{
 }
 
 /*----------FOOTER PAGE END ----------*/
+
+
